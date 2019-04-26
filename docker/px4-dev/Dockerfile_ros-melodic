@@ -39,3 +39,4 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-key 421C365BD9F
 	&& rm -rf /var/lib/apt/lists/{apt,dpkg,cache,log} /tmp/* /var/tmp/*
 
 RUN rosdep init && rosdep update
+RUN echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc 
